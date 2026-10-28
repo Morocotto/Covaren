@@ -1,0 +1,162 @@
+/*display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+*/
+
+/* Configuración global de los márgenes, padding y enlaces */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Color de fondo general */
+body {
+    background-color: #EEF4F7;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Diseño de la cabecera */
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Redimensionando la imagen del logo */
+.encabezado img {
+    max-width: 125px;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* Menu de navegacion */
+.menu-principal {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+/* El elemento contenedor del desplegable */
+.lista {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+}
+
+/* El enlace principal "Servicios ▾" */
+.lista-caida {
+    display: inline-block;
+    padding: 8px 12px;
+    color: #15324B;
+    font-weight: 700;
+    font-size: 150%;
+}
+
+/* El contenedor del submenu*/
+.lista-content {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    right: 0; 
+    min-width: 220px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 8px 0;
+    list-style: none;
+    z-index: 1000;
+}
+
+/* Estilos de los elementos internos del submenu */
+.lista-content li {
+    list-style: none;
+    width: 100%;
+}
+
+.lista-content li a {
+    display: block;
+    padding: 10px 16px;
+    color: #15324B;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Efecto hover al pasar el ratón por las opciones */
+.lista-content li a:hover {
+    background-color: #EEF4F7;
+    color: #2878A5;
+}
+
+/* LA MAGIA: Mostrar el submenú al hacer hover sobre .lista */
+.lista:hover .lista-content {
+    display: block;
+}
+
+/*Imagen de fondo para la leyenda del inicio*/
+.imagen-fondo{
+    color: #FFFF;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/edificio.jpeg');
+    min-height: 50vh;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(2.5rem, 8vw, 4.6875rem);
+    background-size: cover;
+    background-position: center;
+}
+
+/*Alineando los textos de bienvenida*/
+#bienvenida {
+    text-align: center;
+    background-color: #FFFF;
+    padding: 40px 20px;
+}
+
+/*cambiando el color a la clase titulo h1*/
+.titulo {
+    color: #15324B;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+/*Color al p dentro del div con id bienvenida*/
+#bienvenida p {
+   color: #2d363d;
+   font-size: 1.5rem;
+   line-height: 1.5;
+}
+
+/*Alineando los textos de sobre nosotros mas a la derecha*/
+.nosotros {
+    background-color: #FFFFFF;
+    width: 100%;             
+    box-sizing: border-box;   
+    text-align: left;          
+    padding: 60px 10%;        
+}
+
+.nosotros .pverde{
+    color: #3d5e44;
+    font-size: 150%;
+}
+
+.nosotros p{
+    color: #2d363d;
+    font-size: 170%;
+}
+
