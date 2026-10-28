@@ -1,7 +1,3 @@
-/*display: flex;
-    justify-content: flex-end; 
-    align-items: center;
-*/
 
 /* Configuración global de los márgenes, padding y enlaces */
 * {
@@ -13,12 +9,14 @@
 
 /* Color de fondo general */
 body {
-    background-color: #EEF4F7;
+    background-color: #f0f4f6;
+    font-family: 'Inter', sans-serif;
 }
 
+/*quitando el overflow*/
 html, body {
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 /* Diseño de la cabecera */
@@ -27,7 +25,7 @@ html, body {
     top: 0;
     z-index: 1000;
     background-color: #FFFFFF;
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,6 +83,7 @@ html, body {
     width: 100%;
 }
 
+/*Diseño y colores de la lista de los*/
 .lista-content li a {
     display: block;
     padding: 10px 16px;
@@ -147,16 +146,191 @@ html, body {
     width: 100%;             
     box-sizing: border-box;   
     text-align: left;          
-    padding: 60px 10%;        
+    padding: 60px 10%;  
+    box-shadow: 0 2px 3px #2d363d; 
 }
 
+/*Titulo verde contenido en la clase nosotros*/
 .nosotros .pverde{
     color: #3d5e44;
     font-size: 150%;
 }
 
+.pverde{
+    color: #3d5e44;
+    font-size: 150%;
+}
+
+/*Cambiando los parrafos contenidos en la clase nosotros*/
 .nosotros p{
     color: #2d363d;
     font-size: 170%;
+}
+
+/*Separar y posicionar las tarjetas*/
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: center; 
+    align-items: stretch; 
+    gap: 20px;           
+    flex-wrap: wrap;       
+    padding: 20px;
+}
+
+/*Agregar estilos a las tarjetas*/
+.tarjeta {
+    background-color: #fcfeff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;     
+    padding: 24px;
+    flex: 1;                
+    min-width: 250px;        
+    max-width: 350px;        
+    box-shadow: 0 4px 6px #2d363d; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/*Color y tamaño al titulo de la tarjeta*/
+.titulo-tarjeta {
+    color: #3d5e44;
+    font-size: 150%;
+}
+
+/*Color y tamaño a los parrafos*/
+.contenedor-tarjetas p {
+    color: #2d363d;
+    font-size: 125%;
+}
+
+/*Efecto al pasar el mouse sobre las tarjetas :)*/
+.tarjeta:hover {
+    transform: scale(0.98);
+}
+
+/*Redimensionando las tarjetas con su forma y colores y asi XD*/
+.contenedor-tarjetas2 {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 20px 4%;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px #2d363d; 
+}
+
+/*Dimension a la imagen*/
+.contenedor-tarjetas2 img {
+    max-width: 400px;
+    height: auto;
+}
+
+/*Ubicando texto de tarjeta2*/
+.texto-tarjeta2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+}
+
+/*QUitando margen al titulo de la targeta 2, bueno en 0*/
+.titulo-tarjeta2 {
+    margin: 0;
+}
+
+/*Color y tamaño a los parrafos de la tarjeta 2 :)*/
+.texto-tarjeta2 p {
+    margin: 0;
+    color: #2d363d;
+    font-size: 200%;
+}
+
+
+/* Estilos del pie de página */
+.pie {
+    background-color: #15324B;
+    padding: 2.5rem 1.5rem;
+    font-family: sans-serif;
+    color: #FFFFFF;
+    border-top: 1px solid #2878A5;
+    text-align: center;
+}
+
+/* Contenedor principal usando Flexbox con distribución equitativa */
+.pie-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75rem;
+    margin: 0 auto;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Bloque izquierdo (Logo) */
+.pie-logo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.pie-logo img {
+    height: 4rem;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Bloque central (Título y texto perfectamente centrados) */
+.pie-centro {
+    flex: 2;
+    text-align: center;
+}
+
+.titulo-pie {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+#parrafo-pie, .pie-contenido p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #E2EAF0;
+    margin: 0;
+}
+
+/* Bloque derecho (Enlaces de contacto grandes y alineados) */
+.pie-contacto {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pie-contacto ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Enlaces grandes sin romper la simetría */
+.pie-contacto a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+
+.pie-contacto a:hover {
+    color: #2878A5; 
 }
 
